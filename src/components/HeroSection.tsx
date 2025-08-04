@@ -61,7 +61,7 @@ const HeroSection = () => {
               Hi,
               <br />
               I'm{" "}
-              <span className="text-primary glow-primary">Krithik U S</span>
+              <span className="text-primary text-primary ">Krithik U S</span>
             </motion.h1>
 
             <motion.div initial={{
