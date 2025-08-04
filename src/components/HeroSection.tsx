@@ -1,9 +1,24 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, MessageCircle, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/developer-hero.jpg";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const typingTexts = [
+    "I'm a Web Developer",
+    "I build modern websites",
+    "I create full-stack applications",
+    "I love coding & learning new tech",
+  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prev) => (prev + 1) % typingTexts.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   const socialLinks = [
     { icon: Github, href: "https://github.com", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
@@ -46,7 +61,20 @@ const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-xl md:text-2xl mb-8 text-white/90"
             >
-              <span className="block mb-2">I love coding & AI</span>
+              <div className="block mb-2 h-8 overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentTextIndex}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -20, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="block"
+                  >
+                    {typingTexts[currentTextIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
