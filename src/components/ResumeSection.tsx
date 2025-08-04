@@ -114,25 +114,7 @@ const ResumeSection = () => {
           </motion.div>
 
           {/* Additional Info */}
-          <motion.div variants={itemVariants} className="grid md:grid-cols-3 gap-6 mt-12">
-            {[{
-            label: "Experience",
-            value: "2+ Years"
-          }, {
-            label: "Projects Completed",
-            value: "10+"
-          }, {
-            label: "Technologies",
-            value: "15+"
-          }].map((stat, index) => (
-            <Card key={index} className="glass text-center p-6 hover:glow-primary transition-all duration-300">
-              <CardContent className="p-0">
-                <h4 className="text-2xl font-bold text-primary mb-2">{stat.value}</h4>
-                <p className="text-muted-foreground">{stat.label}</p>
-              </CardContent>
-            </Card>
-          ))}
-          </motion.div>
+          
         </motion.div>
       </div>
     </section>;
