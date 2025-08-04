@@ -61,7 +61,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom portfolio colors
+				navy: 'hsl(var(--navy))',
+				'navy-light': 'hsl(var(--navy-light))',
+				'yellow-glow': 'hsl(var(--yellow-glow))',
+				'blue-glow': 'hsl(var(--blue-glow))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +89,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				glow: {
+					'0%': { boxShadow: '0 0 20px hsl(var(--primary) / 0.5)' },
+					'100%': { boxShadow: '0 0 40px hsl(var(--primary) / 0.8)' }
+				},
+				typing: {
+					'from': { width: '0' },
+					'to': { width: '100%' }
+				},
+				'blink-caret': {
+					'from, to': { borderColor: 'transparent' },
+					'50%': { borderColor: 'hsl(var(--primary))' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'typing': 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite'
 			}
 		}
 	},
