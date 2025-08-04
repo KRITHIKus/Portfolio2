@@ -124,7 +124,14 @@ const ResumeSection = () => {
           }, {
             label: "Technologies",
             value: "15+"
-          }].map((stat, index) => {})}
+          }].map((stat, index) => (
+            <Card key={index} className="bg-card/50 border-border/50 text-center p-6">
+              <CardContent className="p-0">
+                <h4 className="text-2xl font-bold text-primary mb-2">{stat.value}</h4>
+                <p className="text-muted-foreground">{stat.label}</p>
+              </CardContent>
+            </Card>
+          ))}
           </motion.div>
         </motion.div>
       </div>
