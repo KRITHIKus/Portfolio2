@@ -142,7 +142,7 @@ const HeroSection = () => {
           }} transition={{
             delay: 0.8,
             duration: 0.8
-          }} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          }} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start my-[10px]">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-primary" onClick={() => document.getElementById("projects")?.scrollIntoView({
               behavior: "smooth"
             })}>
@@ -150,7 +150,7 @@ const HeroSection = () => {
               </Button>
               <Button size="lg" variant="outline" onClick={() => document.getElementById("contact")?.scrollIntoView({
               behavior: "smooth"
-            })} className="border-foreground/30 text-foreground hover:bg-foreground hover:text-background glass my-[10px]">
+            })} className="border-foreground/30 text-foreground hover:bg-foreground hover:text-background glass my-0">
                 Get In Touch
               </Button>
             </motion.div>
