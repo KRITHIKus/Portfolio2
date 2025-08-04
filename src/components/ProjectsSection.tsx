@@ -62,7 +62,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" ref={ref} className="py-20 bg-muted/30">
+    <section id="projects" ref={ref} className="py-20 gradient-section">
       <div className="container mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -93,7 +93,7 @@ const ProjectsSection = () => {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <Card className="bg-card border-border shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden h-full">
+                <Card className="glass shadow-2xl hover:shadow-3xl hover:glow-primary transition-all duration-500 overflow-hidden h-full">
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
                     <motion.img
@@ -109,7 +109,7 @@ const ProjectsSection = () => {
                       <Button
                         size="sm"
                         variant="secondary"
-                        className="bg-white/90 text-foreground hover:bg-white"
+                        className="glass text-foreground hover:bg-foreground/10"
                         asChild
                       >
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">

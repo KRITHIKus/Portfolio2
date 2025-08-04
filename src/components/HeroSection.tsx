@@ -41,13 +41,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="text-center lg:text-left order-2 lg:order-1"
           >
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold mb-6 text-white"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground"
             >
               Hi,
               <br />
@@ -59,7 +59,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-xl md:text-2xl mb-8 text-white/90"
+              className="text-xl md:text-2xl lg:text-3xl mb-8 text-foreground/90"
             >
               <div className="block mb-2 h-8 overflow-hidden">
                 <AnimatePresence mode="wait">
@@ -101,9 +101,9 @@ const HeroSection = () => {
                   transition={{ delay: 0.8 + index * 0.1, duration: 0.3 }}
                   whileHover={{ scale: 1.2, rotateZ: 10 }}
                   whileTap={{ scale: 0.9 }}
-                  className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 glow-primary"
+                  className="p-3 glass rounded-full hover:glow-primary transition-all duration-300"
                 >
-                  <social.icon className="w-6 h-6 text-white" />
+                  <social.icon className="w-6 h-6 text-foreground" />
                 </motion.a>
               ))}
             </motion.div>
@@ -125,7 +125,7 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-foreground"
+                className="border-foreground/30 text-foreground hover:bg-foreground hover:text-background glass"
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Get In Touch
@@ -138,7 +138,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
+            className="relative order-1 lg:order-2 mb-8 lg:mb-0"
           >
             <motion.div
               animate={{ y: [0, -20, 0] }}

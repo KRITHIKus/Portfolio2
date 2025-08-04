@@ -49,7 +49,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" ref={ref} className="py-20 bg-background">
+    <section id="about" ref={ref} className="py-20 gradient-section">
       <div className="container mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -79,7 +79,7 @@ const AboutSection = () => {
 
               {/* Education Card */}
               <motion.div variants={itemVariants}>
-                <Card className="bg-card border-border shadow-lg hover:shadow-xl transition-all duration-300">
+                <Card className="glass shadow-2xl hover:shadow-3xl transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="p-3 bg-primary/10 rounded-lg">
@@ -112,7 +112,7 @@ const AboutSection = () => {
                   whileHover={{ scale: 1.02 }}
                   className="group"
                 >
-                  <Card className="bg-card border-border shadow-lg hover:shadow-xl transition-all duration-300 gradient-card">
+                  <Card className="glass shadow-2xl hover:shadow-3xl transition-all duration-300 hover:glow-primary">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
                         <motion.div

@@ -53,7 +53,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" ref={ref} className="py-20 bg-muted/30">
+    <section id="contact" ref={ref} className="py-20 gradient-section">
       <div className="container mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -84,7 +84,7 @@ const ContactSection = () => {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="group"
               >
-                <Card className="bg-card border-border shadow-lg hover:shadow-2xl transition-all duration-500 gradient-card">
+                <Card className="glass shadow-2xl hover:shadow-3xl hover:glow-primary transition-all duration-500">
                   <CardContent className="p-6 text-center">
                     <motion.div
                       whileHover={{ rotate: 10, scale: 1.1 }}
@@ -114,7 +114,7 @@ const ContactSection = () => {
           {/* CTA Section */}
           <motion.div
             variants={itemVariants}
-            className="text-center bg-card rounded-2xl p-8 shadow-lg gradient-card"
+            className="text-center glass rounded-2xl p-8 shadow-2xl"
           >
             <h3 className="text-2xl font-bold mb-4 text-foreground">
               Ready to Start a Project?

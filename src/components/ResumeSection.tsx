@@ -44,7 +44,7 @@ const ResumeSection = () => {
       }
     }
   };
-  return <section id="resume" ref={ref} className="py-20 bg-background">
+  return <section id="resume" ref={ref} className="py-20 gradient-section">
       <div className="container mx-auto px-6">
         <motion.div initial="hidden" animate={isInView ? "visible" : "hidden"} variants={containerVariants} className="max-w-4xl mx-auto">
           {/* Section Header */}
@@ -60,7 +60,7 @@ const ResumeSection = () => {
 
           {/* Resume Card */}
           <motion.div variants={itemVariants} className="flex justify-center">
-            <Card className="bg-card border-border shadow-2xl hover:shadow-3xl transition-all duration-500 max-w-md w-full gradient-card">
+            <Card className="glass shadow-3xl hover:glow-primary transition-all duration-500 max-w-md w-full">
               <CardContent className="p-8 text-center">
                 <motion.div initial={{
                 scale: 0
@@ -125,7 +125,7 @@ const ResumeSection = () => {
             label: "Technologies",
             value: "15+"
           }].map((stat, index) => (
-            <Card key={index} className="bg-card/50 border-border/50 text-center p-6">
+            <Card key={index} className="glass text-center p-6 hover:glow-primary transition-all duration-300">
               <CardContent className="p-0">
                 <h4 className="text-2xl font-bold text-primary mb-2">{stat.value}</h4>
                 <p className="text-muted-foreground">{stat.label}</p>
