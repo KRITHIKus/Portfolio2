@@ -148,9 +148,9 @@ const HeroSection = () => {
             })}>
                 View My Work
               </Button>
-              <Button size="lg" variant="outline" className="border-foreground/30 text-foreground hover:bg-foreground hover:text-background glass" onClick={() => document.getElementById("contact")?.scrollIntoView({
+              <Button size="lg" variant="outline" onClick={() => document.getElementById("contact")?.scrollIntoView({
               behavior: "smooth"
-            })}>
+            })} className="border-foreground/30 text-foreground hover:bg-foreground hover:text-background glass my-[10px]">
                 Get In Touch
               </Button>
             </motion.div>
@@ -166,7 +166,7 @@ const HeroSection = () => {
         }} transition={{
           duration: 0.8,
           delay: 0.4
-        }} className="relative order-1 lg:order-2 mb-8 lg:mb-0">
+        }} className="relative order-1 lg:order-2 mb-8 lg:mb-0 my-[100px]">
             <motion.div animate={{
             y: [0, -20, 0]
           }} transition={{
