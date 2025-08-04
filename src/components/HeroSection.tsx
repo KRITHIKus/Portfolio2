@@ -174,7 +174,7 @@ const HeroSection = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }} className="relative z-10 my-0 mx-[10px]">
-              <img src={heroImage} alt="Krithik U S - Developer" className="w-full max-w-lg mx-auto rounded-2xl shadow-2xl" />
+              
             </motion.div>
             
             {/* Floating Elements */}
