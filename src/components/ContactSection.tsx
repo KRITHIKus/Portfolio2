@@ -122,21 +122,29 @@ const ContactSection = () => {
             <p className="text-muted-foreground mb-6 max-w-md mx-auto">
               I'm always open to discussing new opportunities and interesting projects.
             </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-primary group"
-                asChild
-              >
-                <a href="mailto:krithikus2004@gmail.com">
-                  <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  Send Message
-                </a>
-              </Button>
-            </motion.div>
+<a
+  href="https://mail.google.com/mail/?view=cm&to=krithikus2004@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={(e) => {
+    e.preventDefault();
+    const gmailURL = "https://mail.google.com/mail/?view=cm&to=krithikus2004@gmail.com";
+
+    const newWindow = window.open(gmailURL, "_blank", "noopener,noreferrer");
+
+    
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+      window.location.href = "mailto:krithikus2004@gmail.com";
+    }
+  }}
+  className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 shadow-primary transition duration-300 group"
+>
+  <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+  Send Message
+</a>
+
+
+
           </motion.div>
         </motion.div>
       </div>

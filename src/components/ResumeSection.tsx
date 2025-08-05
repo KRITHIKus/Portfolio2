@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+
 const ResumeSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -13,7 +14,7 @@ const ResumeSection = () => {
   const handleDownload = () => {
     // Create a temporary link to download resume
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You would need to add the actual resume file
+    link.href = '/RESUME.pdf'; // You would need to add the actual resume file
     link.download = 'Krithik_US_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -107,7 +108,7 @@ const ResumeSection = () => {
               }} transition={{
                 delay: 0.8
               }} className="text-xs text-muted-foreground mt-4">
-                  PDF • Last updated: December 2024
+                  PDF • Last updated: July 2025
                 </motion.p>
               </CardContent>
             </Card>

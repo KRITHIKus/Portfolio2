@@ -4,9 +4,9 @@ import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import farmingAiImage from "@/assets/farming-ai-project.jpg";
-import bloggingImage from "@/assets/blogging-project.jpg";
-import bullsEyeImage from "@/assets/bulls-eye-project.jpg";
+import farmingAiImage from "@/assets/Farming-ai.png";
+import bloggingImage from "@/assets/a2d.png";
+import bullsEyeImage from "@/assets/bullseye.png";
 
 const ProjectsSection = () => {
   const ref = useRef(null);
@@ -18,24 +18,24 @@ const ProjectsSection = () => {
       description: "AI-powered agricultural application using machine learning to help farmers optimize crop yield and monitor plant health. Built with Python, TensorFlow, and modern web technologies.",
       image: farmingAiImage,
       technologies: ["Python", "Machine Learning", "TensorFlow", "React", "Flask"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/KRITHIKus/project24",
+      liveUrl: "https://farmer-ai-x2hw.onrender.com/",
     },
     {
-      title: "Blogging Website",
+      title: "A2d Blogg",
       description: "Admin-centric blogging platform with modern content management features. Includes user authentication, rich text editor, and responsive design for optimal user experience.",
       image: bloggingImage,
       technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/KRITHIKus/mern-blog",
+      liveUrl: "https://a2d-blog.onrender.com/",
     },
     {
       title: "Bulls Eye",
       description: "Comprehensive website security scanner tool that analyzes vulnerabilities and provides detailed security reports. Features real-time scanning and threat detection capabilities.",
       image: bullsEyeImage,
-      technologies: ["Python", "Security Tools", "React", "API Integration", "Data Analysis"],
-      githubUrl: "#",
-      liveUrl: "#",
+      technologies: ["Python", "Security Tools", "React", "API Integration", "Selenium"],
+      githubUrl: "https://github.com/KRITHIKus/safelink",
+      liveUrl: "https://bullseye-n9jz.onrender.com/",
     },
   ];
 
@@ -109,7 +109,7 @@ const ProjectsSection = () => {
                       <Button
                         size="sm"
                         variant="secondary"
-                        className="glass text-foreground hover:bg-foreground/10"
+                        className="glass text-foreground hover:bg-foreground/10 hover:text-black"
                         asChild
                       >
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">

@@ -14,11 +14,11 @@ const HeroSection = () => {
   }, []);
   const socialLinks = [{
     icon: Github,
-    href: "https://github.com",
+    href: "https://github.com/KRITHIKus",
     label: "GitHub"
   }, {
     icon: Linkedin,
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/krithik-u-s-a545a4326/",
     label: "LinkedIn"
   }, {
     icon: MessageCircle,
@@ -26,7 +26,7 @@ const HeroSection = () => {
     label: "Reddit"
   }, {
     icon: Trophy,
-    href: "https://leetcode.com",
+    href: "https://leetcode.com/u/krithikus/",
     label: "LeetCode"
   }];
   return <section id="home" className="min-h-screen flex items-center gradient-hero relative overflow-hidden">
@@ -61,7 +61,7 @@ const HeroSection = () => {
               Hi,
               <br />
               I'm{" "}
-              <span className="text-primary text-primary ">Krithik U S</span>
+              <span className="text-primary ">Krithik U S</span>
             </motion.h1>
 
             <motion.div initial={{
