@@ -14,7 +14,7 @@ const ResumeSection = () => {
   const handleDownload = () => {
     // Create a temporary link to download resume
     const link = document.createElement('a');
-    link.href = '/RESUME1.pdf'; // You would need to add the actual resume file
+    link.href = '/URESUME.pdf'; // You would need to add the actual resume file
     link.download = 'Krithik_US_Resume.pdf';
     document.body.appendChild(link);
     link.click();
