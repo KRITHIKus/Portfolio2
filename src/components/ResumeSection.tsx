@@ -12,9 +12,9 @@ const ResumeSection = () => {
     margin: "-100px"
   });
   const handleDownload = () => {
-    // Create a temporary link to download resume
+    
     const link = document.createElement('a');
-    link.href = '/URESUME.pdf'; // You would need to add the actual resume file
+    link.href = '/Krithik-US-Resume.pdf';
     link.download = 'Krithik_US_Resume.pdf';
     document.body.appendChild(link);
     link.click();
