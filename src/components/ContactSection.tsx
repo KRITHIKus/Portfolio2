@@ -154,11 +154,12 @@ const ContactSection = () => {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: 1 }}
-        className="text-center mt-16 pt-8 border-t border-border"
+        className="text-center mt-16 pt-6 border-t border-border"
       >
         <p className="text-muted-foreground">
-          © 2024 Krithik U S. All rights reserved.
+          © 2025 Krithik U S
         </p>
+
       </motion.footer>
     </section>
   );

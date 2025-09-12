@@ -5,7 +5,13 @@ import heroImage from "@/assets/developer-hero.jpg";
 import { useState, useEffect } from "react";
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const typingTexts = ["I'm a Web Developer", "I build modern websites", "I create full-stack applications", "I love coding & learning new tech"];
+const typingTexts = [
+  "I develop MERN stack applications",
+  "I can build APIs and responsive UIs",
+  "I’m learning and growing through real projects",
+  "I help turn ideas into working web apps"
+];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex(prev => (prev + 1) % typingTexts.length);

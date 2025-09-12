@@ -14,7 +14,7 @@ const Navbar = () => {
       setScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ["home", "about", "projects", "resume", "contact"];
+      const sections = ["home", "about","skills", "projects", "resume", "contact"];
       const sectionElements = sections.map(id => document.getElementById(id));
       
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -39,10 +39,10 @@ const scrollToSection = (sectionId: string) => {
     // 👉 CHANGED: Add slight delay for mobile scrolling to ensure smooth transition
     setMobileMenuOpen(false); // Close mobile menu first
 
-    // Delay the scroll only if the mobile menu is open
+    
     setTimeout(() => {
       window.scrollTo({ top: y, behavior: "smooth" });
-    }, mobileMenuOpen ? 300 : 0); // 300ms to match AnimatePresence transition
+    }, mobileMenuOpen ? 300 : 0); 
   }
 };
 
@@ -50,6 +50,7 @@ const scrollToSection = (sectionId: string) => {
   const navItems = [
     { id: "home", label: "Home",  },
     { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "resume", label: "Resume" },
     { id: "contact", label: "Contact" },

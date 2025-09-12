@@ -1,30 +1,34 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Brain, Trophy, GraduationCap } from "lucide-react";
+import { Code, Brain, Trophy, GraduationCap,AppWindow, GitBranch,  Hammer} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const highlights = [
-    {
-      icon: Brain,
-      title: "AI Development",
-      description: "Developed a Farming AI application with Python & Machine Learning",
-    },
-    {
-      icon: Code,
-      title: "Full-Stack Development",
-      description: "Built an Admin-Centric Blogging Platform with modern technologies",
-    },
-    {
-      icon: Trophy,
-      title: "Problem Solving",
-      description: "Solves Data Structures & Algorithms on LeetCode regularly",
-    },
-  ];
+ const highlights = [
+  {
+    icon: AppWindow,
+    title: "MERN Stack Development",
+    description:
+      "End-to-end web apps using MongoDB, Express.js, React.js, and Node.js. Experience with role-based access, secure authentication, and scalable CRUD APIs.",
+  },
+  {
+    icon: Code,
+    title: "Backend & API Development",
+    description:
+      "Designing and deploying RESTful APIs with JWT authentication, database optimization (MongoDB), and third-party API integrations.",
+  },
+  {
+    icon: Trophy,
+    title: "Client-Focused Solutions",
+    description:
+      "I focus on building practical, production-ready solutions — from custom dashboards to business-specific applications — delivered on time with clean code.",
+  },
+];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -72,8 +76,8 @@ const AboutSection = () => {
                 variants={itemVariants}
                 className="text-lg text-muted-foreground leading-relaxed"
               >
-                Hi, I'm <span className="text-primary font-semibold">Krithik</span>, a passionate 
-                full-stack developer with experience in AI-based applications. I love creating 
+                Hi, I'm <span className="text-primary font-semibold">Krithik</span>, a 
+                MERN Stack developer with knowledge in AI-based applications. I love creating 
                 innovative solutions that bridge the gap between technology and real-world problems.
               </motion.p>
 
@@ -125,9 +129,18 @@ const AboutSection = () => {
                           <h3 className="text-xl font-semibold mb-2 text-foreground">
                             {highlight.title}
                           </h3>
-                          <p className="text-muted-foreground leading-relaxed">
-                            {highlight.description}
-                          </p>
+                                     {Array.isArray(highlight.description) ? (
+                <ul className="list-disc pl-5 text-muted-foreground space-y-1">
+                  {highlight.description.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-muted-foreground leading-relaxed">
+                  {highlight.description}
+                </p>
+              )}
+
                         </div>
                       </div>
                     </CardContent>
