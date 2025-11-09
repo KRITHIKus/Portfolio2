@@ -14,7 +14,7 @@ const ResumeSection = () => {
   const handleDownload = () => {
     
     const link = document.createElement('a');
-    link.href = '/Krithik-US-Resume.pdf';
+    link.href = '/Krithik_US_CV.pdf';
     link.download = 'Krithik_US_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -108,7 +108,7 @@ const ResumeSection = () => {
               }} transition={{
                 delay: 0.8
               }} className="text-xs text-muted-foreground mt-4">
-                  PDF • Last updated: July 2025
+                  PDF • Last updated: November 2025
                 </motion.p>
               </CardContent>
             </Card>
