@@ -27,15 +27,15 @@ const SkillsSection = () => {
     {
       icon: Globe,
       title: "Frontend",
-      skills: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5"],
+      skills: ["React.js", "JavaScript (ES6+)", "Tailwind CSS","Bootstrap V5", "HTML5"],
       color: "text-secondary",
       bgColor: "bg-secondary/10",
       hoverColor: "hover:bg-secondary/20"
     },
     {
       icon: Database,
-      title: "Database",
-      skills: ["MongoDB (Mongoose, Aggregation, Indexing)", "Firebase (Auth, Storage)"],
+      title: "Database & Authentication",
+      skills: ["MongoDB (Mongoose)","Firebase (Auth)"],
       color: "text-accent",
       bgColor: "bg-accent/10",
       hoverColor: "hover:bg-accent/20"
@@ -51,7 +51,7 @@ const SkillsSection = () => {
     {
       icon: Cloud,
       title: "Deployment & DevOps",
-      skills: ["Render", "CI/CD basics", "Environment Configs"],
+      skills: ["Render", "CI/CD basics", "Environment Configs", "Cloudinary"],
       color: "text-secondary",
       bgColor: "bg-secondary/10",
       hoverColor: "hover:bg-secondary/20"

@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, PanelTop,} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+
+import { FaBehance } from 'react-icons/fa';
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -154,12 +155,46 @@ const ContactSection = () => {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: 1 }}
-        className="text-center mt-16 pt-6 border-t border-border"
+        className="text-center mt-10 pt-3 h-5 border-t border-border"
       >
-        <p className="text-muted-foreground">
-          © 2025 Krithik U S
+        <p className=" text-lg text-muted-foreground" >
+          2025 | Krithik U S
         </p>
-
+  <div className="flex justify-center gap-6 mt-4">
+            <a
+              href="https://github.com/KRITHIKus"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              <Github className="w-6 h-6  "  />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/krithik-u-s-a545a4326/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a
+              href="https://a2d-blog.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              <PanelTop className="w-6 h-6" />
+            </a>
+          <a
+              href="https://www.behance.net/krithikkrithik5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              <FaBehance className="w-6 h-6" />
+            </a>
+        
+          </div>
       </motion.footer>
     </section>
   );

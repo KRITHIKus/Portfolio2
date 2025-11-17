@@ -80,7 +80,7 @@ const typingTexts = [
             delay: 0.4,
             duration: 0.8
           }} className="text-xl md:text-2xl lg:text-3xl mb-8 text-foreground/90">
-              <div className="block mb-2 h-8 overflow-hidden">
+              <div className="block   min-h-[40px] lg:min-h-[60px] overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.span key={currentTextIndex} initial={{
                   y: 20,
