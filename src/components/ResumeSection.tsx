@@ -14,7 +14,7 @@ const ResumeSection = () => {
   const handleDownload = () => {
     
     const link = document.createElement('a');
-    link.href = '/Krithik_US_CV.pdf';
+    link.href = '/KRITHIK_FS(U)_RESUME.pdf';
     link.download = 'Krithik_US_Resume.pdf';
     document.body.appendChild(link);
     link.click();
